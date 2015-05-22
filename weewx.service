@@ -1,0 +1,21 @@
+# $Id: weewx.service 2726 2014-11-28 15:00:25Z mwall $
+# systemd configuration for weewx
+
+[Unit]
+Description=weewx weather system
+Requires=syslog.service
+Requires=ntp.service
+After=syslog.service
+After=ntp.service
+RequiresMountsFor=/home
+
+[Service]
+ExecStart=/home/weewx/bin/weewxd /home/weewx/weewx.conf
+ExecReload=/bin/kill -HUP $MAINPID
+Type=simple
+PIDFile=/var/run/weewx.pid
+#User=weewx
+#Group=weewx
+
+[Install]
+WantedBy=multi-user.target
