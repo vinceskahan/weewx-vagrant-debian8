@@ -13,7 +13,7 @@
 Vagrant.configure(2) do |config|
 
   # the base box came from https://github.com/holms/vagrant-jessie-box/releases/download/Jessie-v0.1/Debian-jessie-amd64-netboot.box
-
+  # so do a 'vagrant box add <url_here> --name deb8' to save the base box first into your vagrant setup
   config.vm.box = "deb8"
 
   # forward localhost 8080 to 80 in the VM
