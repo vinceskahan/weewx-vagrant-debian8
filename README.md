@@ -2,7 +2,7 @@
 
 These files will configure the following virtual box:
 
-  * debian 8.0 with a rather minimal footprint
+  * debian 8.0 with a rather minimal footprint with systemd enabled
   * weewx-3.1.0 installed in Simulator mode
   	* debug=1 in weewx.conf
 	* weewx.service is patched to work with Debian 8
