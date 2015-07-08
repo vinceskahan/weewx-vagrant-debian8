@@ -1,9 +1,9 @@
-# Vagrant file(s) for weewx 3.1.0 on Debian 8.0
+# Vagrant file(s) for weewx 3.2.x on Debian 8.0
 
 These files will configure the following virtual box:
 
   * debian 8.0 with a rather minimal footprint with systemd enabled
-  * weewx-3.1.0 installed in Simulator mode
+  * weewx-3.2.x installed in Simulator mode
   	* debug=1 in weewx.conf
 	* weewx.service is patched to work with Debian 8
   * nginx used as the webserver
