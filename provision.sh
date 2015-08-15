@@ -5,6 +5,9 @@
 #
 ########################################################################
 
+# set to USA debian mirrors (my base box used UK)
+cp /vagrant/sources.list /etc/apt/sources.list
+
 # patch up to current
 sudo apt-get update
 sudo apt-get upgrade
@@ -16,10 +19,12 @@ sudo apt-get install -y sqlite3 lynx wget curl procps nginx
 sudo apt-get install -y python-configobj python-cheetah python-imaging python-serial python-usb python-dev
 
 # download/build/install weewx in simulator mode
-wget http://sourceforge.net/projects/weewx/files/latest/download?source=files -O /tmp/weewx.tgz
+wget http://www.weewx.com/downloads/weewx-3.2.1.tar.gz -O /tmp/weewx.tgz
 cd /tmp
-tar zxvf /tmp/weewx.tgz
-cd weewx-* ; ./setup.py build ; sudo ./setup.py install --quiet
+echo "...extracting weewx..."
+tar zxf /tmp/weewx.tgz
+echo "...building weewx..."
+cd weewx-* ; ./setup.py build ; sudo ./setup.py install --no-prompt
 
 # link it into the web (debian) - the path is different on ubuntu
 sudo  ln -s /var/www/html /home/weewx/public_html
