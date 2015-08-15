@@ -13,7 +13,6 @@ The virtual machine comes up with two network adaptors
   * eth0 dhcp up and NAT'd toward Internet
   * eth1 statically configured to the host-only adaptor
 
-
 To install:
   * clone this directory into a scratch directory of your choosing
   * type 'vagrant up' to download the base box and build the weewx-enabled result
@@ -24,4 +23,7 @@ Disclaimer - set your passwords as you wish, don't expose this box on Internet, 
 
 Warning - this was uploaded from msysgit on Windows, so beware your EOL in the files herein.
 
-Notes: unfortunately I can't remember which box this is based on, if you know how to figure it out please let me know.  Also, the sources.list is set to the USA debian mirrors.  You'll likely want to edit appropriately to set your mirrors to your desired locations if you're outside the USA.
+Notes:
+  * the box this is based on is noted in the Vagrantfile, along with how to save it to a user-friendly name.
+  * you can choose to download sources from the latest released one, or latest available from git.   See the provision.sh for details.
+
