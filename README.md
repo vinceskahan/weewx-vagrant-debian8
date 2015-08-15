@@ -1,9 +1,9 @@
-# Vagrant file(s) for weewx 3.1.0 on Debian 8.0
+# Vagrant file(s) for weewx 3.2.1 on Debian 8.0
 
 These files will configure the following virtual box:
 
   * debian 8.0 with a rather minimal footprint with systemd enabled
-  * weewx-3.1.0 installed in Simulator mode
+  * weewx-3.2.1 installed in Simulator mode
   	* debug=1 in weewx.conf
 	* weewx.service is patched to work with Debian 8
   * nginx used as the webserver
@@ -23,3 +23,5 @@ To install:
 Disclaimer - set your passwords as you wish, don't expose this box on Internet, usual best practices apply
 
 Warning - this was uploaded from msysgit on Windows, so beware your EOL in the files herein.
+
+Notes: unfortunately I can't remember which box this is based on, if you know how to figure it out please let me know.  Also, the sources.list is set to the USA debian mirrors.  You'll likely want to edit appropriately to set your mirrors to your desired locations if you're outside the USA.
