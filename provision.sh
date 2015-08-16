@@ -37,6 +37,7 @@ else
    # this assumes Tom always has his tarball with a top directory weewx-x.y.z
    wget http://www.weewx.com/downloads/weewx-3.2.1.tar.gz -O /tmp/weewx.tgz
    echo "...extracting weewx..."
+   cd /tmp
    tar zxf /tmp/weewx.tgz
 fi
 
