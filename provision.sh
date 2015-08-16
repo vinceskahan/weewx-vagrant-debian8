@@ -20,6 +20,10 @@ sudo apt-get install -y sqlite3 lynx wget curl procps nginx
 # get weewx prerequisites
 sudo apt-get install -y python-configobj python-cheetah python-imaging python-serial python-usb python-dev
 
+# optional - this will slow your install down
+# sudo apt-get install -y python-pip
+# sudo pip install pyephem
+
 #-------------------------------
 # uncomment your desired method to download weewx sources
 
