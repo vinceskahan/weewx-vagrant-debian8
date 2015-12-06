@@ -1,6 +1,7 @@
 ########################################################################
 #
 # quick provisioning script for weewx-3.2.1 on debian-8 under vagrant
+#    2015-1206 - vinceskahan@gmail.com - weewx 3.3.0 with US debian mirrors
 #    2015-0814 - vinceskahan@gmail.com - weewx 3.2.1 with US debian mirrors
 #
 ########################################################################
@@ -39,7 +40,7 @@ then
    git clone https://github.com/weewx/weewx.git /tmp/weewx-current
 else
    # this assumes Tom always has his tarball with a top directory weewx-x.y.z
-   wget http://www.weewx.com/downloads/weewx-3.2.1.tar.gz -O /tmp/weewx.tgz
+   wget http://www.weewx.com/downloads/weewx-3.3.0.tar.gz -O /tmp/weewx.tgz
    echo "...extracting weewx..."
    cd /tmp
    tar zxf /tmp/weewx.tgz
