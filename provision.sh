@@ -9,7 +9,7 @@
 ########################################################################
 
 # uncomment to set the timezone to where we're at (edit to taste)
-TIMEZONE = "US/Pacific"
+TIMEZONE="US/Pacific"
 echo $TIMEZONE > /etc/timezone
 dpkg-reconfigure --frontend noninteractive tzdata
 
