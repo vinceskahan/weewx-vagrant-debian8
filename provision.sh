@@ -1,11 +1,17 @@
 ########################################################################
 #
 # quick provisioning script for weewx-3.2.1 on debian-8 under vagrant
+#    2015-1212 - vinceskahan@gmail.com - set the timezone
 #    2015-1206 - vinceskahan@gmail.com - weewx 3.3.1 with US debian mirrors
 #    2015-1206 - vinceskahan@gmail.com - weewx 3.3.0 with US debian mirrors
 #    2015-0814 - vinceskahan@gmail.com - weewx 3.2.1 with US debian mirrors
 #
 ########################################################################
+
+# uncomment to set the timezone to where we're at (edit to taste)
+TIMEZONE = "US/Pacific"
+echo $TIMEZONE > /etc/timezone
+dpkg-reconfigure --frontend noninteractive tzdata
 
 # set to USA debian mirrors (my base box used UK)
 cp /vagrant/sources.list /etc/apt/sources.list
@@ -23,8 +29,8 @@ sudo apt-get install -y sqlite3 lynx wget curl procps nginx ntp
 sudo apt-get install -y python-configobj python-cheetah python-imaging python-serial python-usb python-dev
 
 # optional - this will slow your install down
-# sudo apt-get install -y python-pip
-# sudo pip install pyephem
+sudo apt-get install -y python-pip
+sudo pip install pyephem
 
 #-------------------------------
 # uncomment your desired method to download weewx sources
