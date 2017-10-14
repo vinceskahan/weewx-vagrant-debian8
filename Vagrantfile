@@ -20,6 +20,9 @@ Vagrant.configure(2) do |config|
   # forward localhost 8080 to 80 in the VM
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
+  # for weeRT
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
+
   # eth1 is a static ip on the host-only network
   config.vm.network "private_network", ip: "192.168.56.8"
 
