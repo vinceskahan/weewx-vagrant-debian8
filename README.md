@@ -2,10 +2,11 @@
 
 These files will configure the following virtual box:
 
-  * debian 8.0 with a rather minimal footprint with systemd enabled
-  * weewx-3.2.1 installed in Simulator mode
+  * debian 8.latest with a rather minimal footprint with systemd enabled
+  * weewx-3.8.x installed in Simulator mode
   	* debug=1 in weewx.conf
 	* weewx.service is patched to work with Debian 8
+    * weeRT installed
   * nginx used as the webserver
   * lynx installed for a text-mode browser (after you 'vagrant ssh' in)
 
@@ -18,6 +19,11 @@ To install:
   * type 'vagrant up' to download the base box and build the weewx-enabled result
   * wait a few minutes, connect your host browser to http://localhost:8080 for the weewx web
   * and/or 'vagrant ssh' into the VM to look at /var/log/messages as needed
+
+To check:
+  * connect to localhost:3000 for weeRT
+  * connect to localhost:8080 for weewx
+  * if you see weeRT stop, weewx probably stopped (do 'systemctl weewx restart')
 
 Disclaimer - set your passwords as you wish, don't expose this box on Internet, usual best practices apply
 
