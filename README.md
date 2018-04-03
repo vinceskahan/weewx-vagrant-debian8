@@ -1,3 +1,8 @@
+# DEPRECATED 2018-0402 - PLEASE USE https://github.com/vinceskahan/weewx-vagrant 
+
+
+
+
 # Vagrant file(s) for weewx 3.2.1 on Debian 8.0
 
 These files will configure the following virtual box:
